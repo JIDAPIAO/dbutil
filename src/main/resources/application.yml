@@ -1,0 +1,38 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: dbutil
+  jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+  datasource:
+      url: jdbc:mysql://118.89.122.147:13306/kettle?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+env:
+  entry-point: kettle/entrypoint.kjb
+  autoExecute: "YES"
+
+  from-dbs:
+    - FROM
+  to-dbs:
+    - TO
+  db-settings:
+    - name: FROM
+      host: 118.89.122.147
+      port: 13306
+      user: root
+      password: 123456
+      charset: utf8
+      dbName: coin_machine
+    - name: TO
+      host: 118.89.122.147
+      port: 13306
+      user: root
+      password: 123456
+      charset: utf8
+      dbName: test_test
+
