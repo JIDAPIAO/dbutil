@@ -21,7 +21,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <kettle.version>7.1.0.9-101</kettle.version>
-        <mysql.version>5.1.41</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <hikaricp.version>2.6.1</hikaricp.version>
     </properties>
 
